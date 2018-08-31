@@ -3,3 +3,30 @@ languageCode = "en-us"
 title = "RHElements"
 theme = "kube"
 disableFastRender = true
+Paginate = 4
+[Params]
+  author = "RHElements" # add your company name
+  github = "" # add your github profile name
+  twitter = "" # add your twitter profile
+  email = "rhelements@redhat.com"
+
+[[menu.main]]
+    name = "Get Started"
+    weight = 100
+    url = "/get-started/"
+[[menu.main]]
+    name = "Theming"
+    weight = 200
+    url = "/theming/"
+[[menu.main]]
+    name = "Develop"
+    weight = 300
+    url = "/develop/"
+[[menu.extra]]
+    name = "Community"
+    weight = 500
+    url = "/site-info/community"
+[[menu.extra]]
+    name = "Get Help"
+    weight = 500
+    url = "/site-info/get-help"
