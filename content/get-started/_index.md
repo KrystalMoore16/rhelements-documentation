@@ -1,5 +1,5 @@
--+++
-title = "Introduction"
++++
+title = "Get Started"
 description = ""
 date = 2018-08-31T14:02:31-04:00
 weight = 20
@@ -8,7 +8,7 @@ bref = ""
 toc = true
 +++
 
-# Get Started
+<!-- # Get Started -->
 
 ## Prerequisites
 

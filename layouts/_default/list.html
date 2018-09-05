@@ -4,17 +4,24 @@
 {{ define "main" }}
 
 <div id="hero" class="wrap">
-  <h1> {{.Site.Params.title }}</h1>
-  
-  <p>Our vision, news and ideas, and whatever feels important.<br></p>
+  <h1> {{.Params.title }}</h1>
 </div>
+
+<div class="list-toc">
+  <h3>Contents</h3>
+  <ul class="guide">
+    {{ range .Paginator.Pages.ByWeight }} {{ partial "page-summary" . }} {{ end }}
+  </ul>
+</div>
+
 <ul id="posts">
 
- <!-- {{ range .Paginator.Pages.ByWeight }} {{ partial "page-summary" . }} {{ end }} -->
-  <!-- <section>{{ partial "pagination" .}}</section> -->
+ {{ .Content }}
+ 
 </ul>
 
 {{ end }} 
+
 {{ define "footer" }} 
   {{ partial "footer" . }} 
 {{ end }}

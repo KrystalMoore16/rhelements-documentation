@@ -11,6 +11,10 @@
     </div> 
     <div id="kube-component" class="content">
     {{ partial "toc" .}}
+    
+    <aside>
+        {{ .TableOfContents }}
+    </aside>
 
     {{ .Content}}
 <!-- Inject script tag in this template  -->

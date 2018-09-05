@@ -1,4 +1,4 @@
--+++
++++
 title = "Develop"
 description = ""
 date = 2018-08-31T14:02:31-04:00
@@ -8,7 +8,7 @@ bref = ""
 toc = true
 +++
 
-# Develop
+<!-- # Develop -->
 
 ## Prerequisites
 

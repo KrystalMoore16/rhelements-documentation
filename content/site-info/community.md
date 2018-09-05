@@ -1,5 +1,5 @@
 +++
-title = "Community"
+title = "Join the Community"
 description = ""
 date = 2018-08-31T14:02:31-04:00
 weight = 20
@@ -9,7 +9,7 @@ toc = true
 +++
 
 
-# Contributing to RHElements
+# Contribute to RHElements
 
 ## How to Report a Bug
 
