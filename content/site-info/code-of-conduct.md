@@ -8,7 +8,6 @@ bref = ""
 toc = true
 +++
 
-
 # Contributor Covenant Code of Conduct
 
 ## Our Pledge

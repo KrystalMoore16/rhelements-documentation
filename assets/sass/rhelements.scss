@@ -1,0 +1,248 @@
+@import "colors";
+@import "layout";
+@import "style";
+@import "typography";
+
+
+// TODO: 
+//  - Split CSS into logical files
+//  - Convert lingering CSS to SASS
+//  - Add rh-layout grid
+
+a:hover,
+a:focus {
+  color: #06c;
+}
+
+header #top {
+  margin-bottom: 0;
+  box-shadow: 4px 2px 6px rgba(0,0,0,.1);
+  
+  nav#top-nav-main {
+    float: right;
+    padding-left: 10px;
+    border-left: none;
+  }
+
+  nav#top-nav-extra {
+    li a {
+      margin-right: .5rem;
+    }
+  }
+  
+  #top-brand {
+    margin-right: 0;
+    
+    a {
+      background: url(/img/logo/png/rhelements-icon-blue.png) no-repeat 0 50%;
+      background-size: 65px;
+      padding: 2rem 3.6rem;
+      font-size: 1.4rem;
+      text-decoration: none;
+      color: #252525;
+    }
+  }
+}
+
+main {
+  
+  #hero.page-header {
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    margin-bottom: 2rem;
+  }
+  
+  // Homepage Specific
+  #hero.homepage {
+    padding: 0;
+    background-color: $rh-global--color--gray-platinum;
+    
+    h1 {
+      width: max-content;
+      margin-bottom: 0;
+      display: flex;
+      align-items: center;
+      // padding: 2rem 3.6rem;
+      font-size: 4rem;
+      
+      .hero-logo {
+        width: 125px;
+        margin-right: 18px;
+      }
+    }
+    
+    p {
+      margin-top: 0;
+      margin-bottom: 2.5rem;
+      padding-top: 2rem;
+      
+      &::before {
+        background-color: #4f7599;
+      }
+    }
+    
+    @media (min-width: 600px){
+      padding: 5rem 4rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
+  // Homepage Specific
+  #kube-features {
+    margin-top: 0;
+    padding: 4rem;
+    
+    ul {
+      list-style-type: none;
+    }
+    
+  }
+  
+  & > .rh-l-grid {
+    height: 100% !important;
+  }
+  
+  // Left toc on Single and List templates
+  section#main-toc {
+    // position: fixed;
+    // top: 21%;
+    // bottom: 0;
+    // width: 272px;
+    padding: 3rem 2rem;
+    background-color: $rh-global--color--gray-moon;
+    overflow-y: auto;
+    display: none;
+    
+    @media (min-width: 992px) {
+      display: block;
+    }
+    
+    .toc-desktop {
+      list-style-type: none;
+    }
+  }
+  
+  #content {
+    grid-column-start: 1;
+    
+    @media (min-width: 768px) {
+      grid-column-start: 2;
+    } 
+    
+    @media (min-width: 992px) {
+      grid-column-start: auto;
+    } 
+    
+    #posts {
+      max-width: 100%;
+      margin-top: 0;
+      text-align: left;
+      
+      h2 {
+        margin-top: 3rem;
+        margin-bottom: 1.4rem;
+        /* padding-bottom: 1rem;
+        border-bottom: 2px solid rgba(0,0,0,.1); */
+        font-size: 1.8rem;
+      }
+      
+      h2:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+
+  
+  
+  .list-toc {
+    // position: fixed;
+    // top: 150px;
+    // left: 100px;
+    padding: 3rem 2rem;
+    // border-left: 2px solid #aee339;
+    display: none;
+    
+    @media (min-width: 1200px) {
+      display: block;
+    }
+  }
+
+  .list-toc h3 {
+    margin-bottom: .5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #005a7a;
+    text-transform: uppercase;
+  }
+
+  .list-toc .guide {
+    list-style-type: none;
+    position: sticky;
+    padding: 0;
+    margin: 0;
+  }
+
+  .list-toc .guide li {
+    /* border: none; */
+  }
+
+  .list-toc .guide li a {
+    font-size: 1rem;
+  }
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0;
+  padding: 1.3rem 2rem;
+  font-size: .8rem;
+  border: none;
+  background-color: #313439;
+  color: #fff;
+  // bottom: 0;
+  // position: fixed;
+  // width: 100%;
+  
+  & * {
+    margin-bottom: 0;
+  }
+  
+  nav {
+    order: 2;
+    margin-left: auto;
+  }
+  
+  nav ul {
+    order: 2;
+    display: flex;
+    flex-direction: row;
+    
+    & > * {
+      margin-left: 10px;
+    }
+  }
+  
+  & nav ul li span {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  
+  & nav ul li a {
+    color: rgba(255, 255, 255, 0.9);
+  }
+}
+
+html body {
+  display: grid;
+  height: 100%;
+  grid-template-areas:
+          "nav"
+          "main"
+          "footer";
+  grid-template-rows: 10% 80% 10%;
+}

@@ -3,7 +3,6 @@ languageCode = "en-us"
 title = "RHElements"
 theme = "kube"
 disableFastRender = true
-Paginate = 4
 
 [Params]
   author = "RHElements" # add your company name

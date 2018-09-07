@@ -2,45 +2,47 @@
 {{ define "header"}} {{ partial "header" .}} {{end}}
 {{ define "main"}}
 
-<div id="hero" class="homepage">
-  <h1>{{.Title}}</h1>
-  <p>{{.Description}}</p>
-  
-  <div id="action-buttons">
-    <!-- <a class="button outline big" href="https://github.com/RHElements/" onclick="_gaq.push(['_trackEvent', 'kube', 'github']);">Github</a> -->
-    <a class="button primary big" href="/get-started" onclick="_gaq.push(['_trackEvent', 'kube', 'github']);">Get started</a>
-  </div>
-</div>
+  <div class="rh-l-grid rh-m-gutters">
+    <header id="hero" class="homepage">
+      <h1><img class="hero-logo" src="/img/logo/svg/rhelements-icon-blue.svg" alt=""> {{.Title}}</h1>
+      <p>{{.Description}}</p>
+      
+      <div id="action-buttons">
+        <!-- <a class="button outline big" href="https://github.com/RHElements/" onclick="_gaq.push(['_trackEvent', 'kube', 'github']);">Github</a> -->
+        <a class="button primary big" href="/get-started" onclick="_gaq.push(['_trackEvent', 'kube', 'github']);">Get started</a>
+      </div>
+    </header>
 
-<!-- <div class="message focus" data-component="message"> <span class="close small"></span>
-  <a class="button inverted small " href="https://imperavi.com/kube/" >Kube </a> from <a href="https://imperavi.com/">imperavi</a> is an awesome <mark>CSS & JS Framework</mark> and i designed this template for <a href="https://gohugo.io">hugo</a> with the same original philosophy !
-</div> -->
-<div id="kube-features">
-  <div class="row gutters">
-    <div class="col col-4 item">
-      <figure>
-        <img alt="Baseline" height="48" src="{{ "/img/kube/icon-baseline.png" | relURL }}" width="48">
-      </figure>
-      <h3 class="blue">Web Components</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-    <div class="col col-4 item">
-      <figure>
-        <img alt="Typography" height="48" src="{{ "/img/kube/icon-typo.png" | relURL }}" width="48">
-      </figure>
-      <h3>Browser Support</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-    <div class="col col-4 item">
-      <figure>
-        <img alt="Minimalism" height="48" src="{{ "/img/kube/icon-minimalism.png" | relURL }}" width="48">
-      </figure>
-      <h3 class="green">Framework Support</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <!-- <div class="message focus" data-component="message"> <span class="close small"></span>
+      <a class="button inverted small " href="https://imperavi.com/kube/" >Kube </a> from <a href="https://imperavi.com/">imperavi</a> is an awesome <mark>CSS & JS Framework</mark> and i designed this template for <a href="https://gohugo.io">hugo</a> with the same original philosophy !
+    </div> -->
+
+    <div id="kube-features">
+      <ul class="rh-l-grid rh-m-gutters rh-m-all-12-col rh-m-all-6-col-on-sm rh-m-all-4-col-on-md">
+        <li>
+          <figure>
+            <img alt="Baseline" height="48" src="{{ "/img/kube/icon-baseline.png" | relURL }}" width="48">
+          </figure>
+          <h2 class="blue">Web Components</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </li>
+        <li>
+          <figure>
+            <img alt="Typography" height="48" src="{{ "/img/kube/icon-typo.png" | relURL }}" width="48">
+          </figure>
+          <h2>Browser Support</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </li>
+        <li>
+          <figure>
+            <img alt="Minimalism" height="48" src="{{ "/img/kube/icon-minimalism.png" | relURL }}" width="48">
+          </figure>
+          <h2 class="green">Framework Support</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </li>
+      </ul>
     </div>
   </div>
-</div>
   
-</div>
 {{ end }}
 {{ define "footer"}} {{ partial "footer" .}} {{end}}

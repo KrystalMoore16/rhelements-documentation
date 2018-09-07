@@ -1,11 +1,15 @@
-<article class="show-sm">
+<!-- 
+  Show main nav items on smaller screens and instead of combining those in a hamburger menu,
+  combine the TOC 
+-->
+<div class="show-sm">
   <div id="nav-toggle-box">
     <div id="nav-toggle-brand">
       <a href="/">{{ .Site.Title }}</a>
     </div><a data-component="toggleme" data-target="#top" href="#" id="nav-toggle"><i class="kube-menu"></i></a>
   </div>
-</article>
-<article class="hide-sm" id="top">
+</div>
+<div class="hide-sm" id="top">
   <section id="top-brand">
     <a href="/" title="home">{{ .Site.Title }}</a>
   </section>
@@ -26,4 +30,4 @@
       {{ end }}  
     </ul>
   </nav>
-</article>
+</div>

@@ -76,4 +76,4 @@ We've been publishing our RHElements to npm under the [RHElements organization](
 
 Now that we have everything set up, let's create a RHElement together.
 
-[Create a RHElement](/docs/create-a-rhelement/step-1.html)
+[Create a RHElement](/step-1.html)
